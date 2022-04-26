@@ -19,7 +19,12 @@ public class Logic1
     /// </summary>
     public bool CigarParty(int cigars, bool isWeekend)
     {
-        throw new NotImplementedException();
+        if (cigars >= 40 && (isWeekend || cigars <= 60))
+        {
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -36,7 +41,21 @@ public class Logic1
     /// </summary>
     public int DateFashion(int you, int date)
     {
-        throw new NotImplementedException();
+        //1. ja kaut viens 2 vai mazāk, tad 0
+        if (you <= 2 || date <= 2)
+        {
+            return 0;
+        }
+
+        //2. ja kaut viens ir 8 vai vairāk, tad 2
+        if (you >= 8 || date >= 8)
+        {
+            return 2;
+        }
+
+        //3. citādi 1
+
+        return 1;
     }
 
     /// <summary>
@@ -51,7 +70,28 @@ public class Logic1
     /// </summary>
     public bool SquirrelPlay(int temp, bool isSummer)
     {
-        throw new NotImplementedException();
+        int maxTemp = 90;
+        
+        if (isSummer) 
+        {
+            maxTemp += 10;
+        }
+
+       
+        if (temp >= 60 && temp <= maxTemp)
+        {
+            return true;
+        }
+
+        //1. Ja temp ir starp 60 un 90 un nav vasara, tad atgriežam true
+
+        //2. ja temp starp 60 un 100 un ir vsara, tad atgriežam ture
+
+        //3. citādi atgriežam vērtību false
+
+
+        return false;
+
     }
 
     /// <summary>
