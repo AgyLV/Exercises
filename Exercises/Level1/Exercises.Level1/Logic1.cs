@@ -163,8 +163,24 @@ public class Logic1
     /// alarmClock(0, false) → "10:00"
     /// </summary>
     public string AlarmClock(int day, bool vacation)
-    {
-        throw new NotImplementedException();
+    { 
+
+        if (vacation)
+        {
+            return "10:00";
+        }
+            
+        if (day >= 1 && day <= 5)
+        {
+            return "7:00";
+        }
+        if (day == 6 && day == 0 || !vacation)
+        {
+            return "10:00";
+        }
+        
+        return "off";
+        
     }
 
     /// <summary>
