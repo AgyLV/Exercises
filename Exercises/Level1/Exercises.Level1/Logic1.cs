@@ -125,6 +125,7 @@ public class Logic1
         }
         
         return 2;
+        //NAV
 
         
     }
@@ -180,6 +181,7 @@ public class Logic1
         }
         
         return "off";
+        //NAV
         
     }
 
@@ -192,9 +194,22 @@ public class Logic1
     /// love6(4, 5) → false
     /// love6(1, 5) → true
     /// </summary>
-    public bool Love6(int a, int b)
+    public bool Love6(int a, int b)   
     {
-        throw new NotImplementedException();
+        int a1 = Math.Abs(a);
+        int b1 = Math.Abs(b);
+       
+        int c = a + b;
+
+        int c1 = Math.Abs(c);
+
+        if (a1 == 6 || b1 == 6 || c == 6);
+        {
+            return true;
+        }
+        return false;
+        //NAV
+    
     }
 
     /// <summary>
@@ -208,7 +223,20 @@ public class Logic1
     /// </summary>
     public bool In1To10(int n, bool outsideMode)
     {
-        throw new NotImplementedException();
+        //1. n = ture, ja 1-10;
+        //2. n = true, ja n=1 vai n>10;
+        if (n >= 1 && n <= 10)
+        {
+            return true;
+        }
+        if (n <= 1 && n >= 10)
+        {
+            return true;
+        }
+        {
+        return false;
+        }
+        //NAV
     }
 
     /// <summary>
@@ -234,7 +262,10 @@ public class Logic1
     /// </summary>
     public bool More20(int n)
     {
-        throw new NotImplementedException();
+        //1. TRUE, ja n = 20+1 vai 20+2
+       
+        return false;
+        //NAV
     }
 
     /// <summary>
