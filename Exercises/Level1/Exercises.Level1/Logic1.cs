@@ -600,7 +600,19 @@ public class Logic1
     /// </summary>
     public int RedTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if(a == 2 && b == 2 && c == 2)
+        {
+            return 10;
+        }
+        if (a == b && b == c && c == a)
+        {
+            return 5;
+        }
+        if (a != b && a != c)
+        {
+            return 1;
+        }
+        return 0;
     }
 
     /// <summary>
