@@ -266,7 +266,11 @@ public class Logic1
     /// </summary>
     public bool More20(int n)
     {
-        //1. TRUE, ja n = 20+1 vai 20+2
+        // atgriež true, ja dotais pizitīvais numurs ir 1 vai 
+        if (n % 20 == 1 || n % 20 == 2)
+        {
+            return true;
+        }
        
         return false;
         //NAV
