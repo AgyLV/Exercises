@@ -500,7 +500,11 @@ public class Logic1
     /// </summary>
     public bool InOrder(int a, int b, int c, bool bOk)
     {
-        throw new NotImplementedException();
+        if (a < b && b < c || bOk)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
