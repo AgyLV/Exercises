@@ -349,7 +349,15 @@ public class Logic1
     /// </summary>
     public int TeenSum(int a, int b)
     {
-        throw new NotImplementedException();
+        int sum = a + b;
+
+        if (sum >= 13 || sum <= 19)
+        { 
+            return 19;
+        }
+        
+        return sum;
+       //NAV
     }
 
     /// <summary>
@@ -363,7 +371,13 @@ public class Logic1
     /// </summary>
     public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
     {
-        throw new NotImplementedException();
+        if (isMorning || isMom || isAsleep)
+        {
+            return true;
+        }
+        
+        return false;
+        //NAV
     }
 
     /// <summary>
