@@ -249,8 +249,12 @@ public class Logic1
     /// </summary>
     public bool SpecialEleven(int n)
     {
-        throw new NotImplementedException();
-    }
+        if (n % 11 == 0 || (n - 2) == 11)
+        {
+            return true;
+        }
+        return false;
+    }//NAV
 
     /// <summary>
     /// Return true if the given non-negative number is 1 or 2 more than a multiple of 20.
