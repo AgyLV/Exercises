@@ -626,7 +626,15 @@ public class Logic1
     /// </summary>
     public int GreenTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a == b && b == c && c == a)
+        {
+            return 20;
+        }
+        if (a == b || b == c || c == a)
+        {
+            return 10;
+        }
+        return 0;
     }
 
     /// <summary>
