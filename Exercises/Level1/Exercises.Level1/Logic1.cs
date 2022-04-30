@@ -371,7 +371,7 @@ public class Logic1
     /// </summary>
     public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
     {
-        if (isMorning || isMom || isAsleep)
+        if (!isMorning && isMom && !isAsleep)
         {
             return true;
         }
@@ -393,7 +393,20 @@ public class Logic1
     /// </summary>
     public int TeaParty(int tea, int candy)
     {
-        throw new NotImplementedException();
+        //1. Party ir 1 (good), ja tēja vai konfektes ir vismaz 5;
+        //2. party ir 2 (great), ja tēja vai konfektes ir vairāk par 5;.
+        //3. party ir 0 (bad), ja tēja vai konsfektes ir zem 5;
+        if (tea < 5 || candy < 5)
+        {
+            return 0;
+        }
+        if (tea > 5 || candy > 5)
+        {
+            return 2;
+        }
+        return 1;
+        //NAV
+ 
     }
 
     /// <summary>
