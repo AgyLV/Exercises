@@ -371,7 +371,7 @@ public class Logic1
     /// </summary>
     public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
     {
-        if (!isMorning && isMom && !isAsleep)
+        if (((!isMorning && !isMom) || !isAsleep) || (!isMorning || (!isMom && !isAsleep)))
         {
             return true;
         }
@@ -400,12 +400,11 @@ public class Logic1
         {
             return 0;
         }
-        if (tea > 5 || candy > 5)
+        if ((tea == 10 || tea == 20) || (candy ==10 || candy ==20))
         {
             return 2;
         }
         return 1;
-        //NAV
  
     }
 
@@ -449,8 +448,21 @@ public class Logic1
     /// </summary>
     public string FizzString2(int n)
     {
-        throw new NotImplementedException();
+        if (n % 3 == 0)
+        {
+            return "Fizz!";
+        }
+        if (n % 5 == 0)
+        {
+            return "Buzz!";
+        }
+        if (n % 3 == 0 && n % 5 == 0)
+        {
+            return "FizzBuzz!";
+        }
+        return n + "!";
     }
+    //NAV
 
     /// <summary>
     /// Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
