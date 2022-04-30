@@ -661,7 +661,7 @@ public class Logic1
 
 
         return 0;
-    }
+    }//NAV
 
     /// <summary>
     /// Given two ints, each in the range 10..99, return true if there is a digit that appears in both
@@ -674,8 +674,20 @@ public class Logic1
     /// </summary>
     public bool ShareDigit(int a, int b)
     {
-        throw new NotImplementedException();
+        int c = a / 10;
+        int d = b / 10;
+
+        int e = a % 10;
+        int f = b % 10;
+
+        if (( c == e || d == f) || (c == f || d == e))
+        {
+            return true;
+        }
+        return false;
     }
+
+    //NAV
 
     /// <summary>
     /// Given 2 non-negative ints, a and b, return their sum, so long as the sum has the same
