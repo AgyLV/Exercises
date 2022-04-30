@@ -266,14 +266,13 @@ public class Logic1
     /// </summary>
     public bool More20(int n)
     {
-        // atgriež true, ja dotais pizitīvais numurs ir 1 vai 
         if (n % 20 == 1 || n % 20 == 2)
         {
             return true;
         }
        
         return false;
-        //NAV
+        
     }
 
     /// <summary>
@@ -286,7 +285,19 @@ public class Logic1
     /// </summary>
     public bool Old35(int n)
     {
-        throw new NotImplementedException();
+        if (n % 3 == 0 || n % 3 == 5)
+        {
+            return true;        
+        }
+            
+        if (n % 5 == 0 || n % 5 == 3)
+        {
+            return true;
+        }
+  
+        return false;
+
+        //NAV
     }
 
     /// <summary>
@@ -300,7 +311,14 @@ public class Logic1
     /// </summary>
     public bool Less20(int n)
     {
-        throw new NotImplementedException();
+        
+            if ((n + 1) % 20 == 0 || (n + 2) % 20 == 0)
+            {
+                return true;
+            }
+        
+
+        return false;
     }
 
     /// <summary>
