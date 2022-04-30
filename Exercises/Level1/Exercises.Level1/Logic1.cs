@@ -285,16 +285,12 @@ public class Logic1
     /// </summary>
     public bool Old35(int n)
     {
-        if (n % 3 == 0 || n % 3 == 5)
+        if ((n % 3 == 0 || n % 3 == 5) || (n % 5 == 0 || n % 5 == 3))
         {
             return true;        
         }
             
-        if (n % 5 == 0 || n % 5 == 3)
-        {
-            return true;
-        }
-  
+       
         return false;
 
         //NAV
@@ -474,7 +470,11 @@ public class Logic1
     /// </summary>
     public bool TwoAsOne(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a + b == c || a + c == b || c + b == a)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
