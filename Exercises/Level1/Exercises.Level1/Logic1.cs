@@ -501,8 +501,14 @@ public class Logic1
     /// </summary>
     public bool InOrderEqual(int a, int b, int c, bool bOk)
     {
-        throw new NotImplementedException();
+        if ((a <= b && b <= c) && bOk)
+        {
+            return true;
+        }
+       
+        return false;
     }
+    //NAV
 
     /// <summary>
     /// Given three ints, a b c, return true if two or more of them have the same rightmost digit.
@@ -515,7 +521,11 @@ public class Logic1
     /// </summary>
     public bool LastDigit(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a % 10 == b % 10 || b % 10 == c % 10 || c % 10 == a % 10)
+            {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
