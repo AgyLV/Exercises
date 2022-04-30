@@ -420,7 +420,20 @@ public class Logic1
     /// </summary>
     public string FizzString(string str)
     {
-        throw new NotImplementedException();
+        if(str.StartsWith("f") && str.EndsWith("b"))
+        {
+            return "FizzBuzz";
+        }
+        if (str.StartsWith("f"))
+        {
+            return "Fizz";
+        }
+        if (str.EndsWith("b"))
+        {
+            return "Buzz";
+        }
+        return str;
+
     }
 
     /// <summary>
