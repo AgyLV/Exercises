@@ -123,7 +123,8 @@ public class Logic1
         {
             return 1;
         }
-        
+
+              
         return 2;
         //NAV
 
@@ -293,7 +294,11 @@ public class Logic1
     /// </summary>
     public bool Old35(int n)
     {
-        if ((n % 3 == 0 || n % 3 == 5) || (n % 5 == 0 || n % 5 == 3))
+        if (n % 3 == 5 || n % 5 == 3)
+        {
+            return true;
+        }
+        if (n % 3 == 0 || n % 5 == 0)
         {
             return true;        
         }
@@ -701,7 +706,14 @@ public class Logic1
     /// </summary>
     public int SumLimit(int a, int b)
     {
-        throw new NotImplementedException();
+        int c = a + b;
+
+        if (c >= 10)
+        {
+            return a;
+        }
+               
+        return c;
     }
 }
 
