@@ -164,7 +164,12 @@ public class Logic1
     /// alarmClock(0, false) → "10:00"
     /// </summary>
     public string AlarmClock(int day, bool vacation)
-    { 
+    {
+
+        if ((day == 6 || day == 0) && vacation)
+        {
+            return "off";
+        }
 
         if (vacation)
         {
@@ -175,13 +180,10 @@ public class Logic1
         {
             return "7:00";
         }
-        if (day == 6 && day == 0 || !vacation)
-        {
-            return "10:00";
-        }
         
-        return "off";
-        //NAV
+        
+        return "10:00";
+       
         
     }
 
@@ -538,8 +540,13 @@ public class Logic1
     /// </summary>
     public bool LessBy10(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a > 10 || b > 10 || c > 10)
+        {
+            return true;
+        }
+        return false;
     }
+    //NAV
 
     /// <summary>
     /// Return the sum of two 6-sided dice rolls, each in the range 1..6. However, if noDoubles is
@@ -552,6 +559,7 @@ public class Logic1
     /// </summary>
     public int WithoutDoubles(int die1, int die2, bool noDoubles)
     {
+
         throw new NotImplementedException();
     }
 
@@ -567,7 +575,11 @@ public class Logic1
     /// </summary>
     public int MaxMod5(int a, int b)
     {
-        throw new NotImplementedException();
+        if ( a > b)
+        {
+            return a;
+        }
+        return b;
     }
 
     /// <summary>
