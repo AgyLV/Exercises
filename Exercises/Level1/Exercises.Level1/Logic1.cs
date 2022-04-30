@@ -332,7 +332,11 @@ public class Logic1
     /// </summary>
     public bool NearTen(int num)
     {
-        throw new NotImplementedException();
+        if ((num % 10) <= 2 || (num + 1) % 10 == 0 || (num+2) % 10 ==0)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
