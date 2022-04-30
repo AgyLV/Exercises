@@ -649,7 +649,18 @@ public class Logic1
     /// </summary>
     public int BlueTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        
+        if (a + b == 10 || b + c == 10 || c + a == 10)
+        {
+            return 10;
+        }
+        if (a + b >= 10 && b + c != 10 && a + c != 10)
+        {
+            return 5;
+        }
+
+
+        return 0;
     }
 
     /// <summary>

@@ -1,0 +1,8 @@
+﻿Build started...
+1>------ Build started: Project: Exercises.Level1, Configuration: Debug Any CPU ------
+1>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+1>Exercises.Level1 -> C:\Users\agnese.veze\Source\Repos\3\Exercises\Level1\Exercises.Level1\bin\Debug\net6.0\Exercises.Level1.dll
+2>------ Build started: Project: Exercises.Level1.Tests, Configuration: Debug Any CPU ------
+2>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+2>Exercises.Level1.Tests -> C:\Users\agnese.veze\Source\Repos\3\Exercises\Level1\Exercises.Level1.Tests\bin\Debug\net6.0\Exercises.Level1.Tests.dll
+========== Build: 2 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
