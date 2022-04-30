@@ -198,19 +198,25 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)   
     {
-        int a1 = Math.Abs(a);
-        int b1 = Math.Abs(b);
-       
-        int c = a + b;
-
-        int c1 = Math.Abs(c);
-
-        if (a1 == 6 || b1 == 6 || c == 6);
+        
+        int c = b - a;
+        
+        int d = a + b;
+        
+        int e = a - b;
+     
+        if (a == 6 || b == 6)
         {
             return true;
         }
+        if (c == 6 || d == 6 || e == 6)
+        {
+            return true;
+        }
+
         return false;
-        //NAV
+
+       
     
     }
 
@@ -227,17 +233,17 @@ public class Logic1
     {
         //1. n = ture, ja 1-10;
         //2. n = true, ja n=1 vai n>10;
-        if (n >= 1 && n <= 10)
+        if (n >= 1 && n <= 10 && !outsideMode)
         {
             return true;
         }
-        if (n <= 1 && n >= 10)
+        if (n <= 1 && n >= 10 || outsideMode)
         {
             return true;
         }
-        {
+        
         return false;
-        }
+        
         //NAV
     }
 
