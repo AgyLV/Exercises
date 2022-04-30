@@ -448,6 +448,10 @@ public class Logic1
     /// </summary>
     public string FizzString2(int n)
     {
+        if (n % 3 == 0 && n % 5 == 0)
+        {
+            return "FizzBuzz!";
+        }
         if (n % 3 == 0)
         {
             return "Fizz!";
@@ -456,13 +460,10 @@ public class Logic1
         {
             return "Buzz!";
         }
-        if (n % 3 == 0 && n % 5 == 0)
-        {
-            return "FizzBuzz!";
-        }
+        
         return n + "!";
     }
-    //NAV
+
 
     /// <summary>
     /// Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
