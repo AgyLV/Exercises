@@ -577,6 +577,7 @@ public class Logic1
         }
         return sum;
     }
+    //NAV
 
     /// <summary>
     /// Given two int values, return whichever value is larger. However if the two values have the
