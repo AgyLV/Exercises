@@ -109,23 +109,23 @@ public class Logic1
     {
         int maxSpeed = 60;
 
-        if (isBirthday)
+       if (isBirthday)
         {
             maxSpeed += 5;
         }
-
         if (speed <= 60 || isBirthday)
         {
             return 0;
         }
-
-        if (speed >= 61 && speed <= 80 || isBirthday)
+        if ((speed >= 61 && speed <= 80) || isBirthday)
         {
             return 1;
         }
 
-              
+       
         return 2;
+        
+       
         //NAV
 
         
@@ -234,7 +234,7 @@ public class Logic1
     {
         //1. n = ture, ja 1-10;
         //2. n = true, ja n=1 vai n>10;
-        if (n >= 1 && n <= 10 && !outsideMode)
+        if (n >= 1 && n <= 10)
         {
             return true;
         }
@@ -258,12 +258,12 @@ public class Logic1
     /// </summary>
     public bool SpecialEleven(int n)
     {
-        if (n % 11 == 0 || (n - 2) == 11)
+        if (n % 11 == 0 || (n % 11) == 11 || (n - 1) % 11 == 0)
         {
             return true;
         }
         return false;
-    }//NAV
+    }
 
     /// <summary>
     /// Return true if the given non-negative number is 1 or 2 more than a multiple of 20.
