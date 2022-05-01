@@ -294,17 +294,12 @@ public class Logic1
     /// </summary>
     public bool Old35(int n)
     {
-        if (n % 3 == 5 || n % 5 == 3)
-        {
-            return true;
-        }
-        if (n % 3 == 0 || n % 5 == 0)
+        if ((n % 3 == 5) || (n % 3 == 0) || (n % 5 == 3) || (n % 5 == 0))
         {
             return true;        
         }
             
-       
-        return false;
+       return false;
 
         //NAV
     }
@@ -365,7 +360,7 @@ public class Logic1
             return 19;
         }
         
-        return sum;
+       return sum;
        //NAV
     }
 
@@ -518,7 +513,7 @@ public class Logic1
     /// </summary>
     public bool InOrderEqual(int a, int b, int c, bool bOk)
     {
-        if ((a <= b && b <= c) && bOk)
+        if ((a <= b && b <= c && a <= c) && bOk)
         {
             return true;
         }
@@ -574,8 +569,13 @@ public class Logic1
     /// </summary>
     public int WithoutDoubles(int die1, int die2, bool noDoubles)
     {
+        int sum = die1 + die2;
 
-        throw new NotImplementedException();
+        if (die1 == die2 && noDoubles)
+        {
+            return sum + 1;
+        }
+        return sum;
     }
 
     /// <summary>
@@ -658,18 +658,22 @@ public class Logic1
     /// </summary>
     public int BlueTicket(int a, int b, int c)
     {
-        
-        if (a + b == 10 || b + c == 10 || c + a == 10)
+        int a1 = a + b;
+        int b1 = b + c;
+        int c1 = c + a;
+
+        if (a1 == 10 || b1 == 10 || c1 == 10)
         {
             return 10;
         }
-        if (a + b >= 10 && b + c != 10 && a + c != 10)
+        if (a1 == 10 || b1 != 10 || c1 != 10)
         {
             return 5;
         }
-
-
         return 0;
+        
+
+       
     }//NAV
 
     /// <summary>
