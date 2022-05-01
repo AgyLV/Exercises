@@ -591,12 +591,16 @@ public class Logic1
     /// </summary>
     public int MaxMod5(int a, int b)
     {
-        if ( a > b)
+        if ( a > b || b - 5 == a)
         {
             return a;
         }
-        return b;
-    }
+        if (a < b || a - 5 == b)
+        {
+            return b;
+        }
+        return 0;
+    }//NAV
 
     /// <summary>
     /// You have a red lottery ticket showing ints a, b, and c, each of which is 0, 1, or 2. If they
