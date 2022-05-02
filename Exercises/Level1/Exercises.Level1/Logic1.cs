@@ -520,7 +520,7 @@ public class Logic1
        
         return false;
     }
-    //NAV
+    
 
     /// <summary>
     /// Given three ints, a b c, return true if two or more of them have the same rightmost digit.
