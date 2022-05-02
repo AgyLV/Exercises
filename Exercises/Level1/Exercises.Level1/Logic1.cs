@@ -126,7 +126,7 @@ public class Logic1
         return 2;
         
        
-        //NAV
+       
 
         
     }
@@ -232,8 +232,7 @@ public class Logic1
     /// </summary>
     public bool In1To10(int n, bool outsideMode)
     {
-        //1. n = ture, ja 1-10;
-        //2. n = true, ja n=1 vai n>10;
+        
         if (n >= 1 && n <= 10)
         {
             return true;
@@ -245,7 +244,7 @@ public class Logic1
         
         return false;
         
-        //NAV
+        
     }
 
     /// <summary>
@@ -495,10 +494,11 @@ public class Logic1
     /// </summary>
     public bool InOrder(int a, int b, int c, bool bOk)
     {
-        if (a < b && b < c || bOk)
+        if (a <= b && b <= c || bOk)
         {
             return true;
         }
+
         return false;
     }
 
@@ -667,6 +667,7 @@ public class Logic1
         int b1 = b + c;
         int c1 = c + a;
 
+
         if (a1 == 10 || b1 == 10 || c1 == 10)
         {
             return 10;
@@ -675,11 +676,12 @@ public class Logic1
         {
             return 5;
         }
+        
         return 0;
         
 
        
-    }//NAV
+    }
 
     /// <summary>
     /// Given two ints, each in the range 10..99, return true if there is a digit that appears in both
