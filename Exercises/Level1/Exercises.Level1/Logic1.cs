@@ -711,7 +711,7 @@ public class Logic1
         return false;
     }
 
-    //NAV
+    
 
     /// <summary>
     /// Given 2 non-negative ints, a and b, return their sum, so long as the sum has the same
@@ -725,14 +725,17 @@ public class Logic1
     /// </summary>
     public int SumLimit(int a, int b)
     {
-        int c = a + b;
+        int sum = a + b;
 
-        if (c >= 10)
+        int length = a.ToString().Length;
+        int sumlength = sum.ToString().Length;
+
+        if (sumlength > length)
         {
             return a;
         }
                
-        return c;
+        return sum;
     }
 }
 
