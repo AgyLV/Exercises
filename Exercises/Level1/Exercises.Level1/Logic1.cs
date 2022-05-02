@@ -358,13 +358,13 @@ public class Logic1
     {
         int sum = a + b;
 
-        if (sum >= 13 || sum <= 19)
+        if (a >= 13 && a <= 19 || b >= 13 && b <= 19 )
         { 
             return 19;
         }
         
        return sum;
-       //NAV
+       
     }
 
     /// <summary>
@@ -384,7 +384,7 @@ public class Logic1
         }
         
         return false;
-        //NAV
+        
     }
 
     /// <summary>
@@ -581,7 +581,7 @@ public class Logic1
         }
         return sum;
     }
-    //NAV
+    
 
     /// <summary>
     /// Given two int values, return whichever value is larger. However if the two values have the
