@@ -113,7 +113,7 @@ public class Logic1
         {
             maxSpeed += 5;
         }
-        if (speed <= 60 || isBirthday)
+        if (speed <= 60 || speed <= maxSpeed)
         {
             return 0;
         }
