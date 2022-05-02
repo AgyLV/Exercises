@@ -293,14 +293,18 @@ public class Logic1
     /// </summary>
     public bool Old35(int n)
     {
-        if ((n % 3 == 5) || (n % 3 == 0) || (n % 5 == 3) || (n % 5 == 0))
+        if (n % 3 == 0 && n % 3 != 5)
         {
             return true;        
         }
+        if (n % 5 == 0 && n % 5 != 3)
+        {
+            return true;
+        }
             
-       return false;
+        return false;
 
-        //NAV
+        
     }
 
     /// <summary>
@@ -550,13 +554,13 @@ public class Logic1
     /// </summary>
     public bool LessBy10(int a, int b, int c)
     {
-        if (a > 10 || b > 10 || c > 10)
+        if ((a >= 10 || b > 10 || c > 10) || ( a < 10 || b < 10 || c < 10))
         {
             return true;
         }
         return false;
     }
-    //NAV
+    
 
     /// <summary>
     /// Return the sum of two 6-sided dice rolls, each in the range 1..6. However, if noDoubles is
@@ -591,16 +595,16 @@ public class Logic1
     /// </summary>
     public int MaxMod5(int a, int b)
     {
-        if ( a > b || b - 5 == a)
+        if ( a > b || b - a == 5)
         {
             return a;
         }
-        if (a < b || a - 5 == b)
+        if (a < b || a - b == 5)
         {
             return b;
         }
         return 0;
-    }//NAV
+    }
 
     /// <summary>
     /// You have a red lottery ticket showing ints a, b, and c, each of which is 0, 1, or 2. If they
