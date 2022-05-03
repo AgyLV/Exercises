@@ -23,8 +23,6 @@ public class Array1
         int lastIndex = nums.Length - 1;
         int last = nums[lastIndex];
 
-
-
         return first == 6 || last == 6;
     }
 
@@ -38,7 +36,20 @@ public class Array1
     /// </summary>
     public bool SameFirstLast(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length ==0)
+        {
+            return false;
+        }
+        int firstElement = nums[0];
+        int lastIndex = nums.Length - 1;
+        int lasElements = nums[lastIndex];
+        if (firstElement == lasElements)
+        {
+            return true;
+        }
+        return false;
+        
+       
     }
 
     /// <summary>
