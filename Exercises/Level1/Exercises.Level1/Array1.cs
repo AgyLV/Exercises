@@ -56,7 +56,7 @@ public class Array1
     /// </summary>
     public int[] MakePi()
     {
-        throw new NotImplementedException();
+        return new int [] {  3, 1, 4};
     }
 
     /// <summary>
@@ -66,7 +66,7 @@ public class Array1
     /// commonEnd([1, 2, 3], [7, 3]) → true
     /// commonEnd([1, 2, 3], [7, 3, 2]) → false
     /// commonEnd([1, 2, 3], [1, 3]) → true
-    /// </summary>
+    /// </summary>s
     public bool CommonEnd(int[] a, int[] b)
     {
         throw new NotImplementedException();
