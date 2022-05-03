@@ -19,7 +19,13 @@ public class Array1
     /// </summary>
     public bool FirstLast6(int[] nums)
     {
-        throw new NotImplementedException();
+        int first = nums[0];
+        int lastIndex = nums.Length - 1;
+        int last = nums[lastIndex];
+
+
+
+        return first == 6 || last == 6;
     }
 
     /// <summary>
