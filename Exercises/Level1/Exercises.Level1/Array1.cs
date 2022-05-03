@@ -43,10 +43,10 @@ public class Array1
         int firstElement = nums[0];
         int lastIndex = nums.Length - 1;
         int lasElements = nums[lastIndex];
-        
+
         return firstElement == lasElements;
-        
-       
+
+
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public class Array1
     /// </summary>
     public int[] MakePi()
     {
-        return new int [] {  3, 1, 4};
+        return new int[] { 3, 1, 4 };
     }
 
     /// <summary>
@@ -69,29 +69,19 @@ public class Array1
     /// </summary>s
     public bool CommonEnd(int[] a, int[] b)
     {
-       
+
         int aFirstElement = a[0];
-        
         int bFirstElement = b[0];
+        int firstMasIdex_2 = a.Length - 1;
+        int secondMasIndex_2 = b.Length - 1;
+        int firstMasElement_2 = a[firstMasIdex_2];
+        int secondMasElement_2 = b[secondMasIndex_2];
         if (aFirstElement == bFirstElement)
         {
             return true;
         }
 
-        
-        int firstMasIdex_2 = a.Length - 1;
-        int secondMasIndex_2 = b.Length - 1;
-
-        int firstMasElement_2 = a[firstMasIdex_2];
-        int secondMasElement_2 = b[secondMasIndex_2];
-
-
-
         return secondMasElement_2 == firstMasElement_2;
-        
-        
-
-
 
     }
 
@@ -104,7 +94,15 @@ public class Array1
     /// </summary>
     public int Sum3(int[] nums)
     {
-        throw new NotImplementedException();
+        int sum = 0;
+
+        foreach (var num in nums)
+        {
+            sum = sum + num;
+        }
+
+        return sum;
+
     }
 
     /// <summary>
@@ -117,7 +115,17 @@ public class Array1
     /// </summary>
     public int[] RotateLeft3(int[] nums)
     {
-        throw new NotImplementedException();
+        int a1 = nums[0];
+        int a2 = nums[1];
+        int a3 = nums[2];
+
+        int[] newNums = new int[nums.Length];
+        newNums[0] = a2;
+        newNums[1] = a3;
+        newNums[2] = a1;
+
+        return newNums;
+
     }
 
     /// <summary>
