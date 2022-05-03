@@ -36,18 +36,15 @@ public class Array1
     /// </summary>
     public bool SameFirstLast(int[] nums)
     {
-        if (nums.Length ==0)
+        if (nums.Length == 0)
         {
             return false;
         }
         int firstElement = nums[0];
         int lastIndex = nums.Length - 1;
         int lasElements = nums[lastIndex];
-        if (firstElement == lasElements)
-        {
-            return true;
-        }
-        return false;
+        
+        return firstElement == lasElements;
         
        
     }
