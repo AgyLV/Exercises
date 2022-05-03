@@ -69,7 +69,30 @@ public class Array1
     /// </summary>s
     public bool CommonEnd(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+       
+        int aFirstElement = a[0];
+        
+        int bFirstElement = b[0];
+        if (aFirstElement == bFirstElement)
+        {
+            return true;
+        }
+
+        
+        int firstMasIdex_2 = a.Length - 1;
+        int secondMasIndex_2 = b.Length - 1;
+
+        int firstMasElement_2 = a[firstMasIdex_2];
+        int secondMasElement_2 = b[secondMasIndex_2];
+
+
+
+        return secondMasElement_2 == firstMasElement_2;
+        
+        
+
+
+
     }
 
     /// <summary>
