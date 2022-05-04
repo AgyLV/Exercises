@@ -17,7 +17,19 @@ public class Array2
     /// </summary>
     public int CountEvens(int[] nums)
     {
-        throw new NotImplementedException();
+        int a = 0;
+        
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] % 2 == 0)
+            {
+                return a +=1;
+            }
+           
+        }
+
+            return 0;
     }
 
     /// <summary>
@@ -31,35 +43,61 @@ public class Array2
     /// </summary>
     public int BigDiff(int[] nums)
     {
-        throw new NotImplementedException();
-    }
 
-    /// <summary>
-    /// Return the "centered" average of an array of ints, which we'll say is the mean average of
-    /// the values, except ignoring the largest and smallest values in the array. If there are
-    /// multiple copies of the smallest value, ignore just one copy, and likewise for the largest
-    /// value. Use int division to produce the final average. You may assume that the array is
-    /// length 3 or more.
-    /// 
-    /// centeredAverage([1, 2, 3, 4, 100]) → 3
-    /// centeredAverage([1, 1, 5, 5, 10, 8, 7]) → 5
-    /// centeredAverage([-10, -4, -2, -4, -2, 0]) → -3
-    /// </summary>
-    public int CenteredAverage(int[] nums)
+        int min = nums[0];
+        int max = nums[0];
+        
+            
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+            if (min > nums[i])
+                min = nums[i];
+            if (max < nums[i])
+                max = nums[i];
+            }
+        int diff = max - min;
+        return diff;
+    }
+        /// <summary>
+        /// Return the "centered" average of an array of ints, which we'll say is the mean average of
+        /// the values, except ignoring the largest and smallest values in the array. If there are
+        /// multiple copies of the smallest value, ignore just one copy, and likewise for the largest
+        /// value. Use int division to produce the final average. You may assume that the array is
+        /// length 3 or more.
+        /// 
+        /// centeredAverage([1, 2, 3, 4, 100]) → 3
+        /// centeredAverage([1, 1, 5, 5, 10, 8, 7]) → 5
+        /// centeredAverage([-10, -4, -2, -4, -2, 0]) → -3
+        /// </summary>
+        public int CenteredAverage(int[] nums)
     {
-        throw new NotImplementedException();
-    }
+            
+            int sum = 0;
+            
 
-    /// <summary>
-    /// Return the sum of the numbers in the array, returning 0 for an empty array. Except the
-    /// number 13 is very unlucky, so it does not count and number that come immediately after
-    /// a 13 also do not count.
-    /// 
-    /// sum13([1, 2, 2, 1]) → 6
-    /// sum13([1, 1]) → 2
-    /// sum13([1, 2, 2, 1, 13]) → 6
-    /// </summary>
-    public int Sum13(int[] nums)
+            for (int i = 0; i < nums.Length; i++)
+            {
+                sum += nums[i];
+            }
+            
+            return sum / nums.Length;
+    }
+        
+
+        
+
+       
+        /// <summary>
+        /// Return the sum of the numbers in the array, returning 0 for an empty array. Except the
+        /// number 13 is very unlucky, so it does not count and number that come immediately after
+        /// a 13 also do not count.
+        /// 
+        /// sum13([1, 2, 2, 1]) → 6
+        /// sum13([1, 1]) → 2
+        /// sum13([1, 2, 2, 1, 13]) → 6
+        /// </summary>
+        public int Sum13(int[] nums)
     {
         throw new NotImplementedException();
     }
