@@ -502,8 +502,20 @@ public class Array1
     /// </summary>
     public int[] SwapEnds(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 1)
+        {
+            return nums;
+        }
+        int temp = nums[0]; 
+        nums[0] = nums[nums.Length - 1];
+        nums[nums.Length - 1] = temp; 
+
+        return nums;
+
+        
     }
+
+    
 
     /// <summary>
     /// Given an array of ints of odd length, return a new array length 3 containing the elements
