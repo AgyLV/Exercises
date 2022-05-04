@@ -138,7 +138,16 @@ public class Array1
     /// </summary>
     public int[] Reverse3(int[] nums)
     {
-        throw new NotImplementedException();
+        int a1 = nums[0];
+        int a2 = nums[1];
+        int a3 = nums[2];
+
+        int[] newNums = new int[nums.Length];
+        newNums[0] = a3;
+        newNums[1] = a2;
+        newNums[2] = a1;
+
+        return newNums;
     }
 
     /// <summary>
