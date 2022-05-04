@@ -294,7 +294,15 @@ public class Array1
     /// </summary>
     public bool No23(int[] nums)
     {
-        throw new NotImplementedException();
+        int a = nums[0];
+        int b = nums[1];
+
+        if (a == 2 || b == 2 || a == 3 || b == 3)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     /// <summary>
