@@ -99,8 +99,27 @@ public class Array2
         /// </summary>
         public int Sum13(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 0)
+        {
+            return 0;
+        }
+
+        
+        int sum = 0;
+
+       
+        for (int i = 0; i < nums.Length; i++)
+            {
+                sum += nums[i];
+            }
+        
+        return sum;
+
+        
+
+        
     }
+
 
     /// <summary>
     /// Return the sum of the numbers in the array, except ignore sections of numbers starting
@@ -149,7 +168,19 @@ public class Array2
     /// </summary>
     public bool Sum28(int[] nums)
     {
-        throw new NotImplementedException();
+    int sum = 0;
+
+    for (int i = 0; i < nums.Length; i++)
+        {
+            if (i/2 == 1 && sum == 8)
+            
+            sum += i;
+        }
+
+        return true;
+    
+  
+    return false;
     }
 
     /// <summary>
