@@ -221,9 +221,6 @@ public class Array1
 
 
 
-
-
-
     }
 
     /// <summary>
@@ -236,7 +233,15 @@ public class Array1
     /// </summary>
     public int[] MiddleWay(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int a2 = a[1];
+        int b2 = b[1];
+        
+        int[] newNums = new int[2];
+        newNums[0] = a2;
+        newNums[1] = b2;
+
+        return newNums;
+
     }
 
     /// <summary>
