@@ -606,7 +606,17 @@ public class Array1
     /// </summary>
     public bool Unlucky1(int[] nums)
     {
-        throw new NotImplementedException();
+        int a = 3;
+        for (int i = 1; i < nums.Length; i++)
+        {
+            if (nums[i] == 3 && nums[i] + 1 == 1 || nums[i] + 2 == 1 || nums[i] - 1 == 1 || nums[i] - 2 == 1)
+            {
+                return true;
+            }
+   
+        }
+        
+        return false;
     }
 
     /// <summary>
