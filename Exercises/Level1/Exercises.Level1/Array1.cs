@@ -160,7 +160,25 @@ public class Array1
     /// </summary>
     public int[] MaxEnd3(int[] nums)
     {
-        throw new NotImplementedException();
+        int a1 = nums[0];
+        int a3 = nums[2];
+
+        int[] newNums = new int[nums.Length];
+        newNums[0] = a1;
+        newNums[1] = a1;
+        newNums[2] = a1;
+
+        int[] newNums2 = new int[nums.Length];
+        newNums2[0] = a3;
+        newNums2[1] = a3;
+        newNums2[2] = a3;
+
+        if (a1 >= a3)
+        {
+            return newNums;
+        }
+
+        return newNums2;
     }
 
     /// <summary>
