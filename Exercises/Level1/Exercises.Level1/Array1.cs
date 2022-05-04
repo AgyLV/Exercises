@@ -254,7 +254,16 @@ public class Array1
     /// </summary>
     public int[] MakeEnds(int[] nums)
     {
-        throw new NotImplementedException();
+
+        int a1 = nums[0];
+        int a2 = nums[nums.Length - 1];
+
+        int[] newNums = new int[2];
+        newNums[0] = a1;
+        newNums[1] = a2;
+
+        return newNums;
+
     }
 
     /// <summary>
