@@ -322,7 +322,7 @@ public class Array1
         int bLast = newNums[nums.Length - 1];
 
         newNums[0] = 0;
-        //int blast = aLast;
+       
 
         for (int i = 0; i < nums.Length; i++)
         {
@@ -363,7 +363,18 @@ public class Array1
     /// </summary>
     public int[] Fix23(int[] nums)
     {
-        throw new NotImplementedException();
+        int a = nums[0];
+        int b = nums[1];
+        int c = nums[2];
+
+        //int[] newNums = new int[nums.Length];
+
+        if (a == 2 && b == 3 || b == 2 && c ==3)
+        {
+           nums[Array.IndexOf(nums, 3)] = 0;
+        }
+       return nums;
+        
     }
 
     /// <summary>
