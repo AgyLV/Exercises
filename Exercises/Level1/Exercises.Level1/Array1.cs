@@ -192,7 +192,38 @@ public class Array1
     /// </summary>
     public int Sum2(int[] nums)
     {
-        throw new NotImplementedException();
+        
+
+
+        if (nums.Length == 0)
+        {
+            return 0;
+        }
+
+        if (nums.Length == 1)
+        {
+            return nums[0];
+        }
+
+        int a1 = nums[0];
+        int a2 = nums[1];
+
+        int sum = 0;
+
+
+        foreach(var num in nums)
+        {
+            sum = a1 + a2;
+        }
+
+        return sum;
+
+
+
+
+
+
+
     }
 
     /// <summary>
