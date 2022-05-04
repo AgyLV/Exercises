@@ -630,7 +630,24 @@ public class Array1
     /// </summary>
     public int[] Make2(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int a1 = a[0];
+        int b1 = b[0];
+
+        int[] newNums = new int[2];
+        newNums[0] = a1;
+        newNums[1] = b1;
+
+        if (a.Length == 0)
+        {
+            return b;
+        }
+
+        if (a.Length == 2 || b.Length == 0)
+        {
+            return a;
+        }
+                      
+        return newNums;
     }
 
     /// <summary>
