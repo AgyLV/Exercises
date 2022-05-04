@@ -316,7 +316,22 @@ public class Array1
     /// </summary>
     public int[] MakeLast(int[] nums)
     {
-        throw new NotImplementedException();
+        int aLast = nums[nums.Length - 1];
+
+        int[] newNums = new int[(nums.Length)*2];
+        int bLast = newNums[nums.Length - 1];
+
+        newNums[0] = 0;
+        //int blast = aLast;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            newNums[i] = 0;
+            newNums[newNums.Length - 1] = aLast;  
+
+        }
+
+        return newNums;
     }
 
     /// <summary>
