@@ -454,7 +454,20 @@ public class Array1
     /// </summary>
     public int[] MakeMiddle(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 2)
+        {
+            return nums;
+        }
+        int mid = nums[nums.Length / 2];
+        int mid2 = nums[(nums.Length / 2) + 1];
+
+        int[] newNums = new int[2];
+        newNums[0] = mid;
+        newNums[1] = mid2;
+
+        return newNums;
+
+
     }
 
     /// <summary>
@@ -467,8 +480,17 @@ public class Array1
     /// </summary>
     public int[] PlusTwo(int[] a, int[] b)
     {
-        throw new NotImplementedException();
-    }
+
+        
+        int[] c = new int[a.Length + b.Length];
+        Array.Copy(a, c, a.Length);
+        Array.Copy(b, 0, c, a.Length, b.Length);
+       
+        
+        return c;
+
+
+        }
 
     /// <summary>
     /// Given an array of ints, swap the first and last elements in the array. Return the modified
