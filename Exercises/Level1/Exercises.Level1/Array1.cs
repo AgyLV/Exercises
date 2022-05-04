@@ -367,8 +367,7 @@ public class Array1
         int b = nums[1];
         int c = nums[2];
 
-        //int[] newNums = new int[nums.Length];
-
+      
         if (a == 2 && b == 3 || b == 2 && c ==3)
         {
            nums[Array.IndexOf(nums, 3)] = 0;
@@ -387,7 +386,21 @@ public class Array1
     /// </summary>
     public int Start1(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int a1 = a[0];
+        int b1 = b[0];
+
+        
+        if (a1 == 1 && b1 == 1)
+        {
+            return 2;
+        }
+        if ((a1 == 1 || b1 == 1) && (a.Length != 0 || b.Length != 0))
+        {
+            return 1;
+        }
+
+        return 0;
+        
     }
 
     /// <summary>
@@ -400,7 +413,35 @@ public class Array1
     /// </summary>
     public int[] BiggerTwo(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int a1 = a[0];
+        int a2 = a[1];
+
+        int suma = 0;
+
+        int b1 = a[0];
+        int b2 = a[1];
+
+        int sumb = 0;
+
+        foreach (var num in a)
+        {
+            suma = a1 + a2;
+        }
+                
+        foreach (var num in b)
+        {
+            sumb = b1 + b2;
+        }
+
+        if (suma >= sumb)
+        {
+            return a;
+        }
+
+        return b;
+
+
+
     }
 
     /// <summary>
