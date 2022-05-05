@@ -132,7 +132,32 @@ public class Array2
     /// </summary>
     public int Sum67(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 0)
+        {
+            return 0;
+        }
+       
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 6)
+            {
+                return nums[Array.IndexOf(nums, 6)] = 0;
+            }
+            if (nums[i] == 7)
+            {
+                return nums[Array.IndexOf(nums, 7)] = 0;
+            }
+        }
+        int sum = 0;
+
+        foreach (var num in nums)
+        {
+            sum = num + num;
+        }
+
+        return sum;
+
+        
     }
 
     /// <summary>
@@ -144,7 +169,15 @@ public class Array2
     /// </summary>
     public bool Has22(int[] nums)
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 2 && nums[i]++ == 2)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /// <summary>
