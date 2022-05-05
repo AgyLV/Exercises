@@ -189,7 +189,14 @@ public class Array2
     /// </summary>
     public bool Lucky13(int[] nums)
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (i == 1 || i == 3)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     /// <summary>
@@ -225,7 +232,26 @@ public class Array2
     /// </summary>
     public bool More14(int[] nums)
     {
-        throw new NotImplementedException();
+        int a1 = 0;
+        int b4 = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (i == 4)
+            {
+                //return a1 += 1;
+            }
+
+            if (i == 1)
+            {
+                //return b4 +=1;
+            }
+        }
+        if ( a1 > b4)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -240,8 +266,16 @@ public class Array2
     /// </summary>
     public int[] FizzArray(int n)
     {
-        throw new NotImplementedException();
-    }
+        int[] nums = new int[n];
+        nums[0] = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            int num = nums[i]++;
+        }
+        return nums;
+        
+        }
 
     /// <summary>
     /// Given an array of ints, return true if every element is a 1 or a 4.
@@ -252,7 +286,19 @@ public class Array2
     /// </summary>
     public bool Only14(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 0)
+        {
+            return true;
+
+        }
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (i == 1 || i == 4)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     /// <summary>
