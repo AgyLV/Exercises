@@ -313,20 +313,15 @@ public class Array2
     /// </summary>
     public string[] FizzArray2(int nums)
     {
-        //if (nums.Length == 0)
-        //{
-            //return true;
+        //string[] nums = new int[n];
+        //nums[0] = "0";
 
-        //}
-
-        //for (string i = 0; i < nums.Length; i++)
-        //{
-            //if (i == "1" || i != "4")
-            //{
-                //return true;
-            //}
-        //}
-       //return false;
+        //int i = int.Parse(nums[0]);
+       
+        //foreach (int i in nums)
+        {
+            //return i+1;
+        }
     }
 
     /// <summary>
@@ -338,7 +333,20 @@ public class Array2
     /// </summary>
     public bool No14(int[] nums)
     {
-        throw new NotImplementedException();
+        //if (nums.Length == 0)
+        //{
+        //return true;
+
+        //}
+
+        //for (string i = 0; i < nums.Length; i++)
+          //{
+          //if (i == "1" || i != "4")
+           //{
+            //return true;
+          
+        //}
+        return false;
     }
 
     /// <summary>
