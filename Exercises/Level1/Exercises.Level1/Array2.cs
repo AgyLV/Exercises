@@ -271,7 +271,8 @@ public class Array2
 
         for (int i = 0; i < nums.Length; i++)
         {
-            int num = nums[i]++;
+            nums[i] = i + 1;
+           
         }
         return nums;
         
@@ -312,7 +313,20 @@ public class Array2
     /// </summary>
     public string[] FizzArray2(int nums)
     {
-        throw new NotImplementedException();
+        //if (nums.Length == 0)
+        //{
+            //return true;
+
+        //}
+
+        //for (string i = 0; i < nums.Length; i++)
+        //{
+            //if (i == "1" || i != "4")
+            //{
+                //return true;
+            //}
+        //}
+       //return false;
     }
 
     /// <summary>
