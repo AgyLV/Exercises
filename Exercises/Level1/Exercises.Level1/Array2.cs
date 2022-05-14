@@ -313,15 +313,23 @@ public class Array2
     /// </summary>
     public string[] FizzArray2(int nums)
     {
-        //string[] nums = new int[n];
-        //nums[0] = "0";
+        string[] arr = new string[nums];
+        int[] arrStr = Array.ConvertAll(arr, s => int.Parse(s));
 
-        //int i = int.Parse(nums[0]);
-       
-        //foreach (int i in nums)
-        {
-            //return i+1;
+
+        for (int i = 0; i < arr.Length; i++)
+        { 
+        arr[nums] += 1;
+       // return arrStr;
         }
+
+
+        string[] result = Array.ConvertAll(arrStr, i => i.ToString());
+
+        return result;
+
+
+
     }
 
     /// <summary>
@@ -333,20 +341,21 @@ public class Array2
     /// </summary>
     public bool No14(int[] nums)
     {
-        //if (nums.Length == 0)
-        //{
-        //return true;
+        if (nums.Length == 0)
+        {
+        return true;
+        }
+        
 
-        //}
+        foreach (int num in nums)
+        {
+            if ((num != 1 && num != 4) || (num != 1 || num != 4))
+            {
+                return false;
+            }
+        }
 
-        //for (string i = 0; i < nums.Length; i++)
-          //{
-          //if (i == "1" || i != "4")
-           //{
-            //return true;
-          
-        //}
-        return false;
+        return true;
     }
 
     /// <summary>
@@ -360,7 +369,20 @@ public class Array2
     /// </summary>
     public bool IsEverywhere(int[] nums, int val)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 0)
+        {
+            return true;
+        }
+
+        foreach (int num in nums)
+        {
+            if (val == nums[num])
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -373,7 +395,15 @@ public class Array2
     /// </summary>
     public bool Either24(int[] nums)
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if ((i == 2 && i + 1 == 2) || (i == 4 && i + 1 == 4))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -387,7 +417,27 @@ public class Array2
     /// </summary>
     public int MatchUp(int[] nums1, int[] nums2)
     {
-        throw new NotImplementedException();
+        if (nums1.Length <= 1 || nums2.Length <= 1)
+        {
+            return 0;
+        }
+
+        int sk = 0;
+
+        foreach (int num1 in nums1)
+        {
+            foreach (int num2 in nums2)
+            {
+                if (num1 == num2)
+                {
+                    sk++;
+                    return sk;
+                    
+                }
+            }
+        }
+
+        return 0;
     }
 
     /// <summary>
@@ -400,7 +450,14 @@ public class Array2
     /// </summary>
     public bool Has77(int[] nums)
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (i == 7 || i + 1 == 7 || i + 2 == 7)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     /// <summary>
@@ -413,7 +470,14 @@ public class Array2
     /// </summary>
     public bool Has12(int[] nums)
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if ( i == 1 && i == 2)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     /// <summary>
@@ -426,7 +490,31 @@ public class Array2
     /// </summary>
     public bool ModThree(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 0)
+        {
+            return false;
+        }
+
+        for (var i = 0; i < nums.Length; i++)
+        {
+            int skp = 0;
+            int skn = 0;
+            if (i % 2 == 0)
+            {
+                skp++;
+                
+            }
+            else
+            {
+                skn++;
+            }
+
+            if (skp == 3 && skn == 3)
+            {
+                return true;
+            }
+
+        return false;
     }
 
     /// <summary>
