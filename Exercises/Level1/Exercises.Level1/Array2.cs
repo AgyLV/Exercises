@@ -18,18 +18,19 @@ public class Array2
     public int CountEvens(int[] nums)
     {
         int a = 0;
-        
 
         for (int i = 0; i < nums.Length; i++)
         {
             if (nums[i] % 2 == 0)
             {
-                return a +=1;
+               a = a +=1;
             }
+
+           
            
         }
 
-            return 0;
+        return a;
     }
 
     /// <summary>
@@ -73,7 +74,8 @@ public class Array2
         public int CenteredAverage(int[] nums)
     {
             
-            int sum = 0;
+        int sum = 0;
+        int vid = nums.Length / 2;
             
 
             for (int i = 0; i < nums.Length; i++)
@@ -110,7 +112,15 @@ public class Array2
        
         for (int i = 0; i < nums.Length; i++)
             {
+            if (nums[i] == 13)
+            {
+                i = i + 1;
+              
+            }
+            else
+            {
                 sum += nums[i];
+            }
             }
         
         return sum;
@@ -136,28 +146,27 @@ public class Array2
         {
             return 0;
         }
-       
-        for (int i = 0; i < nums.Length; i++)
-        {
-            if (nums[i] == 6)
-            {
-                return nums[Array.IndexOf(nums, 6)] = 0;
-            }
-            if (nums[i] == 7)
-            {
-                return nums[Array.IndexOf(nums, 7)] = 0;
-            }
-        }
         int sum = 0;
 
-        foreach (var num in nums)
+        for (int i = 0; i < nums.Length; i++)
         {
-            sum = num + num;
+            if (nums[i] == 6 && nums[i + 1] !=7)
+            {
+                return sum;
+            }
+            if (nums[i] == 6 && nums[i + 1] == 7)
+            {
+                i = i + 1;
+            }
+            else
+            {
+                sum = sum + nums[i];
+            }
         }
-
         return sum;
-
         
+
+               
     }
 
     /// <summary>
@@ -169,15 +178,26 @@ public class Array2
     /// </summary>
     public bool Has22(int[] nums)
     {
+        if (nums.Length == 0)
+        {
+            return false;
+        }
+        bool a = true;
+
         for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[i] == 2 && nums[i]++ == 2)
+           
+            if (nums[i] == 2 && nums[i+1] == 2)
             {
                 return true;
             }
+            else
+            {
+                a = false;
+            }
         }
 
-        return false;
+        return a;
     }
 
     /// <summary>
@@ -490,29 +510,30 @@ public class Array2
     /// </summary>
     public bool ModThree(int[] nums)
     {
-        if (nums.Length == 0)
+        //if (nums.Length == 0)
         {
-            return false;
+            //return false;
         }
 
-        for (var i = 0; i < nums.Length; i++)
+        //for (var i = 0; i < nums.Length; i++)
         {
-            int skp = 0;
-            int skn = 0;
-            if (i % 2 == 0)
+            //int skp = 0;
+            //int skn = 0;
+            //if (i % 2 == 0)
             {
-                skp++;
-                
+                //skp++;
+
             }
-            else
+            //else
             {
-                skn++;
+                //skn++;
             }
 
-            if (skp == 3 && skn == 3)
+            //if (skp == 3 && skn == 3)
             {
-                return true;
+                //return true;
             }
+        }
 
         return false;
     }
@@ -527,7 +548,7 @@ public class Array2
     /// </summary>
     public bool HaveThree(int[] nums)
     {
-        throw new NotImplementedException();
+            return false;
     }
 
     /// <summary>
@@ -539,7 +560,7 @@ public class Array2
     /// </summary>
     public bool TwoTwo(int[] nums)
     {
-        throw new NotImplementedException();
+            return false;
     }
 
     /// <summary>
@@ -553,7 +574,7 @@ public class Array2
     /// </summary>
     public bool SameEnds(int[] nums, int val)
     {
-        throw new NotImplementedException();
+            return false;
     }
 
     /// <summary>
