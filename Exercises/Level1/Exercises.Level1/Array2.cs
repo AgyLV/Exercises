@@ -182,7 +182,7 @@ public class Array2
         {
             return false;
         }
-        bool a = true;
+        
 
         for (int i = 0; i < nums.Length; i++)
         {
@@ -191,13 +191,10 @@ public class Array2
             {
                 return true;
             }
-            else
-            {
-                a = false;
-            }
+            
         }
 
-        return a;
+        return false;
     }
 
     /// <summary>
@@ -211,7 +208,7 @@ public class Array2
     {
         for (int i = 0; i < nums.Length; i++)
         {
-            if (i == 1 || i == 3)
+            if (nums[i] == 1 || nums[i] == 3)
             {
                 return false;
             }
@@ -232,13 +229,17 @@ public class Array2
 
     for (int i = 0; i < nums.Length; i++)
         {
-            if (i/2 == 1 && sum == 8)
+            if (nums[i] == 2)
             
-            sum += i;
+            sum += nums[i];
         }
-
-        return true;
+    if (sum == 8)
+        {
+            return true;
+        }
     
+
+         
   
     return false;
     }
@@ -257,14 +258,14 @@ public class Array2
 
         for (int i = 0; i < nums.Length; i++)
         {
-            if (i == 4)
+            if (nums[i] == 1)
             {
-                //return a1 += 1;
+                a1++;
             }
 
-            if (i == 1)
+            if (nums[i] == 4)
             {
-                //return b4 +=1;
+                b4++;
             }
         }
         if ( a1 > b4)
@@ -286,12 +287,18 @@ public class Array2
     /// </summary>
     public int[] FizzArray(int n)
     {
+        
         int[] nums = new int[n];
         nums[0] = 0;
 
+        if (n == 0)
+        {
+            return nums;
+        }
+
         for (int i = 0; i < nums.Length; i++)
         {
-            nums[i] = i + 1;
+            nums[i] = i;
            
         }
         return nums;
@@ -314,12 +321,14 @@ public class Array2
         }
         for (int i = 0; i < nums.Length; i++)
         {
-            if (i == 1 || i == 4)
+            if (nums[i] != 1 || nums[i] != 4)
             {
-                return true;
+                return false;
             }
+        
         }
-        return false;
+        return true;
+
     }
 
     /// <summary>
@@ -338,8 +347,8 @@ public class Array2
 
 
         for (int i = 0; i < arr.Length; i++)
-        { 
-        arr[nums] += 1;
+        {
+            //arr[i];
        // return arrStr;
         }
 
