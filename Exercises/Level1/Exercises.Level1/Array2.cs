@@ -669,7 +669,24 @@ public class Array2
     /// </summary>
     public bool TripleUp(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length < 3)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            int a = nums[i];
+            int b = a + 1;
+            int c = b + 1;
+
+            if (a <= b && b <= c)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -684,7 +701,16 @@ public class Array2
     /// </summary>
     public int[] FizzArray3(int start, int end)
     {
-        throw new NotImplementedException();
+        int gar = end - start;
+        int[] arr = new int[gar];
+
+        for (int i = start; i < arr.Length; i++)
+        {
+            
+            arr[i] = i;
+
+        }
+        return arr;
     }
 
     /// <summary>
@@ -697,7 +723,16 @@ public class Array2
     /// </summary>
     public int[] ShiftLeft(int[] nums)
     {
-        throw new NotImplementedException();
+
+        int[] arr = new int[nums.Length];
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            arr[i] = nums[(i + 1) % nums.Length];
+        }
+        return arr;
+
+        
     }
 
     /// <summary>
@@ -711,7 +746,19 @@ public class Array2
     /// </summary>
     public int[] TenRun(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] arr = new int[nums.Length];
+
+        foreach (int i in nums)
+        {
+            if (arr[i] % 10 == 0)
+            {
+                arr[i + 1] = arr[i];
+                return arr;
+            }
+        
+        }
+
+        return arr;
     }
 
     /// <summary>
@@ -725,7 +772,28 @@ public class Array2
     /// </summary>
     public int[] Pre4(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] arr = new int[nums.Length * 2];
+
+        Array.Copy(nums, arr, nums.Length);
+        int last = arr[arr.Length - 1];
+        
+        if (nums.Length <= 2)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[last] = 4;
+                arr[last - 1] = 4;
+            }
+        }
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            arr[last] = 4;
+           
+                        
+        }
+
+        return arr;
     }
 
     /// <summary>
@@ -768,7 +836,20 @@ public class Array2
     /// </summary>
     public int[] ZeroFront(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] arr = new int[nums.Length];
+       
+        
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (nums[i] <= 0)
+            {
+                return Math.Abs(nums[i]);
+            }
+        }
+        Array.Copy(nums, arr, nums.Length);
+        Array.Sort(arr);
+
+        return arr;
     }
 
     /// <summary>
