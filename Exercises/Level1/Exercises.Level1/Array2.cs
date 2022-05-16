@@ -342,20 +342,19 @@ public class Array2
     /// </summary>
     public string[] FizzArray2(int nums)
     {
-        string[] arr = new string[nums];
-        int[] arrStr = Array.ConvertAll(arr, s => int.Parse(s));
+        int[] arr = new int[nums];
+        
 
 
         for (int i = 0; i < arr.Length; i++)
         {
-            //arr[i];
-       // return arrStr;
+            arr[i] = i;
+            
         }
 
+       string[] arra = Array.ConvertAll(arr, ele => ele.ToString());
 
-        string[] result = Array.ConvertAll(arrStr, i => i.ToString());
-
-        return result;
+        return arra;  
 
 
 
@@ -374,17 +373,17 @@ public class Array2
         {
         return true;
         }
-        
 
-        foreach (int num in nums)
+
+        for (int i = 0; i < nums.Length; i++)
         {
-            if ((num != 1 && num != 4) || (num != 1 || num != 4))
+            if ((nums[i] == 1 || nums[i] == 4) || (nums[i] != 1 && nums[i] != 4))
             {
-                return false;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 
     /// <summary>
@@ -403,15 +402,15 @@ public class Array2
             return true;
         }
 
-        foreach (int num in nums)
+        for (int i = 0; i < nums.Length; i++)
         {
-            if (val == nums[num])
+            if (val == nums[i])
             {
                 return true;
             }
         }
 
-        return false;
+         return false;
     }
 
     /// <summary>
@@ -426,7 +425,7 @@ public class Array2
     {
         for (int i = 0; i < nums.Length; i++)
         {
-            if ((i == 2 && i + 1 == 2) || (i == 4 && i + 1 == 4))
+            if ((nums[i] == 2 && nums[i + 1] == 2) || (nums[i] == 4 && nums[i + 1] == 4))
             {
                 return true;
             }
@@ -452,21 +451,37 @@ public class Array2
         }
 
         int sk = 0;
+        int sk2 = 0;
+        
 
-        foreach (int num1 in nums1)
+        for (int i = 0; i < nums1.Length; i++)
         {
-            foreach (int num2 in nums2)
+            int num1 = nums1[i] - nums1[i + 1];
+            return num1;
+            if (num1 == 2)
             {
-                if (num1 == num2)
-                {
-                    sk++;
-                    return sk;
-                    
-                }
+                sk++;
+                
+
             }
         }
 
-        return 0;
+        for (int i = 0; i < nums2.Length; i++)
+        {
+            int num2 = nums2[i] - nums2[i + 1];
+            return num2;
+            if (num2 == 2)
+            {
+                sk2++;
+               
+
+            }
+        }
+        int kop = sk + sk2;
+        return kop;
+        
+            
+     return 0;
     }
 
     /// <summary>
@@ -479,9 +494,14 @@ public class Array2
     /// </summary>
     public bool Has77(int[] nums)
     {
+        if (nums.Length <= 2)
+        {
+            return false;
+        }
+
         for (int i = 0; i < nums.Length; i++)
         {
-            if (i == 7 || i + 1 == 7 || i + 2 == 7)
+            if (nums[i] == 7 || nums[i + 1] == 7 || nums[i + 3] == 7)
             {
                 return true;
             }
@@ -501,7 +521,7 @@ public class Array2
     {
         for (int i = 0; i < nums.Length; i++)
         {
-            if ( i == 1 && i == 2)
+            if ( nums[i] == 1 && (nums[i + 1] == 2 || nums[i + 3] == 2))
             {
                 return true;
             }
@@ -519,30 +539,32 @@ public class Array2
     /// </summary>
     public bool ModThree(int[] nums)
     {
-        //if (nums.Length == 0)
+        if (nums.Length == 0)
         {
-            //return false;
+            return false;
         }
 
-        //for (var i = 0; i < nums.Length; i++)
+        int skp = 0;
+        int skn = 0;
+
+        for (int i = 0; i < nums.Length; i++)
         {
-            //int skp = 0;
-            //int skn = 0;
-            //if (i % 2 == 0)
+            
+            if (nums[i] % 2 == 0)
             {
-                //skp++;
+                skp++;
 
             }
-            //else
+            else
             {
-                //skn++;
+                skn++;
             }
-
-            //if (skp == 3 && skn == 3)
-            {
-                //return true;
-            }
+        }     
+        if (skp == 3 || skn == 3)
+        {
+              return true;
         }
+        
 
         return false;
     }
@@ -557,7 +579,27 @@ public class Array2
     /// </summary>
     public bool HaveThree(int[] nums)
     {
+        if (nums.Length <= 2)
+        {
             return false;
+        }
+
+
+        
+        int three = 0;
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if ( nums[i] == 3)
+            {
+                three++;
+            }
+            if (three == 3 && (nums[i] == 3 && nums[i + 2] == 3 && nums[i + 4] == 3))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -569,7 +611,22 @@ public class Array2
     /// </summary>
     public bool TwoTwo(int[] nums)
     {
+        if (nums.Length <= 2)
+        {
             return false;
+        }
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 2 && nums[i + 1] == 2)
+            {
+                return true;
+            }
+            if (nums[i] == 2 && nums[i + 1] != 2)
+            {
+                return false;
+            }
+        }
+        return false;
     }
 
     /// <summary>
@@ -583,8 +640,24 @@ public class Array2
     /// </summary>
     public bool SameEnds(int[] nums, int val)
     {
+    
+        if (nums.Length <= 2)
+        { 
+          return false;
+        }
+
+         int n = nums.Length - 1;
+         
+        for (int i = 0; i < nums.Length; i++)
+        {
+           if (n == val)
+            {
+                return true;
+            }
+        }
+
             return false;
-    }
+    }//nesapratu uzdevumu
 
     /// <summary>
     /// Return true if the array contains, somewhere, three increasing adjacent numbers like ....
